@@ -26,6 +26,14 @@ export function getDocPathForId(id: string): string {
   return `/docs/${pathChain.join("/")}.md`;
 }
 
+/*Use a clean, structured MDX template with a title, short summary, and clear section hierarchy. 
+Include overview, core concepts, step-by-step explanations, and examples. Add callouts (tip, info, warning, danger) for emphasis, collapsibles for optional deep dives, and tabs for multiple code variants. 
+Use Mermaid diagrams for workflows and include Python code snippets for implementation. 
+Keep content concise, consistent, and well-formatted with bullets and headings for readability. 
+Add visuals where helpful. End with key takeaways and RAG metadata (category, tags, difficulty) to improve indexing, semantic retrieval, and chunking efficiency in your knowledge base.
+*/
+
+
 export const learningMenuItems: SidebarItem[] = [
   {
     id: "foundation",
