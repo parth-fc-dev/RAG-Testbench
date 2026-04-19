@@ -18,13 +18,11 @@ export default function Button({
   type = "button",
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-300 dark:focus-visible:ring-gray-600 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-md h-11 px-8";
+    "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-300 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 rounded-md h-11 px-8";
 
   const variantStyles = {
-    primary:
-      "bg-black dark:bg-white text-white dark:text-black shadow hover:bg-gray-800 dark:hover:bg-gray-200",
-    secondary:
-      "border border-black dark:border-white text-black dark:text-white hover:bg-gray-50 dark:hover:bg-gray-900",
+    primary: "bg-black text-white shadow hover:bg-gray-800",
+    secondary: "border border-black text-black hover:bg-gray-50",
   };
 
   const buttonClasses = `${baseStyles} ${variantStyles[variant]} ${className}`;
