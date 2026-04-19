@@ -1,0 +1,1 @@
+# Prompt → Model → Output Lifecycle
