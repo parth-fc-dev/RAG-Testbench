@@ -108,7 +108,7 @@ export default function Sidebar({
   activeId,
 }: SidebarProps) {
   return (
-    <aside className="w-64 bg-white border-r border-gray-200 overflow-y-auto h-full">
+    <aside className="w-85 bg-white border-r border-gray-200 overflow-y-auto h-full">
       <nav className="p-4 space-y-1">
         {items.map((item) => (
           <SidebarItemComponent

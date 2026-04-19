@@ -28,100 +28,223 @@ export function getDocPathForId(id: string): string {
 
 export const learningMenuItems: SidebarItem[] = [
   {
-    id: "getting-started",
-    label: "Getting Started",
+    id: "foundation",
+    label: "Foundation & Core Concepts",
     children: [
       {
-        id: "intro",
-        label: "Introduction",
+        id: "llm-fundamentals",
+        label: "LLM Fundamentals",
         children: [
-          { id: "what-is-rag", label: "What is RAG?" },
-          { id: "why-rag", label: "Why Use RAG?" },
-          { id: "use-cases", label: "Use Cases" },
+          { id: "llm-internals", label: "LLM Internals" },
+          { id: "transformer-architecture", label: "Transformer Architecture" },
+          { id: "attention-mechanism", label: "Attention Mechanism" },
+          { id: "tokenization", label: "Tokenization Deep Dive" },
         ],
       },
       {
-        id: "prerequisites",
-        label: "Prerequisites",
+        id: "representation",
+        label: "Representation & Semantics",
         children: [
-          { id: "tech-stack", label: "Technology Stack" },
-          { id: "setup", label: "Setup Guide" },
-          { id: "requirements", label: "System Requirements" },
+          { id: "embeddings", label: "Embeddings & Vector Spaces" },
+          { id: "semantic-similarity", label: "Semantic Similarity" },
+          {
+            id: "vector-retrieval",
+            label: "Vector Representations in Retrieval",
+          },
         ],
       },
       {
-        id: "quickstart",
-        label: "Quick Start",
+        id: "inference-pipeline",
+        label: "Inference Pipeline",
         children: [
-          { id: "first-steps", label: "First Steps" },
-          { id: "basic-example", label: "Basic Example" },
-          { id: "common-errors", label: "Common Errors" },
+          { id: "inference-flow", label: "End-to-End Inference Flow" },
+          { id: "lifecycle", label: "Prompt → Model → Output Lifecycle" },
+          { id: "tradeoffs", label: "Latency vs Quality Trade-offs" },
         ],
       },
     ],
   },
+
   {
-    id: "core-concepts",
-    label: "Core Concepts",
+    id: "models",
+    label: "Model Landscape & Adaptation",
     children: [
+      {
+        id: "model-ecosystem",
+        label: "Model Ecosystem",
+        children: [
+          { id: "model-taxonomy", label: "Open vs Closed Models" },
+          { id: "benchmarking", label: "Capability Benchmarking" },
+          { id: "model-selection", label: "Model Selection Strategies" },
+        ],
+      },
+      {
+        id: "cost-performance",
+        label: "Cost & Performance",
+        children: [
+          { id: "pricing", label: "Pricing Models" },
+          { id: "cost-tradeoffs", label: "Cost vs Performance Trade-offs" },
+          { id: "throughput-latency", label: "Throughput vs Latency" },
+        ],
+      },
+      {
+        id: "training",
+        label: "Training & Adaptation",
+        children: [
+          { id: "pretraining", label: "Pretraining Basics" },
+          { id: "finetuning", label: "Fine-tuning Strategies" },
+          { id: "lora", label: "LoRA / QLoRA / PEFT" },
+        ],
+      },
+      {
+        id: "advanced-adaptation",
+        label: "Advanced Adaptation",
+        children: [
+          { id: "rlhf", label: "RLHF & DPO" },
+          { id: "distillation", label: "Knowledge Distillation" },
+          { id: "synthetic-data", label: "Synthetic Data Generation" },
+          { id: "quantization", label: "Quantization" },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "inference",
+    label: "Inference Optimization",
+    children: [
+      {
+        id: "core-optimization",
+        label: "Core Optimization",
+        children: [
+          { id: "kv-cache", label: "KV Cache & Context Caching" },
+          { id: "batching", label: "Batching Strategies" },
+          { id: "speculative-decoding", label: "Speculative Decoding" },
+        ],
+      },
+      {
+        id: "memory-efficiency",
+        label: "Memory & Efficiency",
+        children: [
+          { id: "paged-attention", label: "Paged Attention" },
+          { id: "token-efficiency", label: "Token Efficiency Techniques" },
+        ],
+      },
+      {
+        id: "infra",
+        label: "Infrastructure",
+        children: [
+          { id: "model-serving", label: "Model Serving Systems" },
+          { id: "scaling", label: "Scaling Inference Systems" },
+        ],
+      },
+      {
+        id: "cost-opt",
+        label: "Cost Optimization",
+        children: [
+          { id: "cost-playbook", label: "Cost Optimization Playbook" },
+          { id: "deployment-tradeoffs", label: "Deployment Trade-offs" },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "prompting",
+    label: "Prompting & Context Engineering",
+    children: [
+      {
+        id: "prompt-basics",
+        label: "Prompting Basics",
+        children: [
+          {
+            id: "prompt-engineering",
+            label: "Prompt Engineering Fundamentals",
+          },
+          { id: "few-shot", label: "Few-shot & In-context Learning" },
+        ],
+      },
+      {
+        id: "reasoning",
+        label: "Reasoning Techniques",
+        children: [
+          { id: "cot", label: "Chain-of-Thought" },
+          { id: "tot", label: "Tree-of-Thought" },
+        ],
+      },
+      {
+        id: "advanced-prompting",
+        label: "Advanced Prompting",
+        children: [
+          { id: "structured-output", label: "Structured Generation" },
+          { id: "context-engineering", label: "Context Engineering" },
+          { id: "dspy", label: "Prompt Optimization (DSPy)" },
+        ],
+      },
+      {
+        id: "prompt-security",
+        label: "Prompt Security",
+        children: [
+          { id: "prompt-injection", label: "Prompt Injection Attacks" },
+          { id: "defenses", label: "Defense Strategies" },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "rag",
+    label: "Retrieval Systems (RAG)",
+    children: [
+      {
+        id: "rag-basics",
+        label: "RAG Fundamentals",
+        children: [
+          { id: "what-is-rag", label: "What is RAG" },
+          { id: "rag-architecture", label: "Retrieval Pipeline Architecture" },
+        ],
+      },
+      {
+        id: "data-prep",
+        label: "Data Preparation",
+        children: [
+          { id: "chunking", label: "Chunking Strategies" },
+          { id: "preprocessing", label: "Document Preprocessing" },
+        ],
+      },
+      {
+        id: "embeddings-storage",
+        label: "Embeddings & Storage",
+        children: [
+          { id: "embedding-models", label: "Embedding Models" },
+          { id: "vector-db", label: "Vector Databases" },
+          { id: "db-comparison", label: "Database Comparisons" },
+        ],
+      },
       {
         id: "retrieval",
-        label: "Retrieval",
+        label: "Retrieval Techniques",
         children: [
-          { id: "embeddings", label: "Embeddings" },
-          { id: "vector-search", label: "Vector Search" },
-          { id: "ranking", label: "Ranking Algorithms" },
+          { id: "dense", label: "Dense Retrieval" },
+          { id: "hybrid", label: "Hybrid Search" },
+          { id: "graph-rag", label: "Graph RAG" },
         ],
       },
       {
-        id: "generation",
-        label: "Generation",
+        id: "ranking",
+        label: "Ranking & Relevance",
         children: [
-          { id: "llm-basics", label: "LLM Basics" },
-          { id: "prompt-engineering", label: "Prompt Engineering" },
-          { id: "context-injection", label: "Context Injection" },
+          { id: "reranking", label: "Reranking Basics" },
+          { id: "advanced-reranking", label: "Advanced Reranking" },
         ],
       },
       {
-        id: "architecture",
-        label: "Architecture",
+        id: "advanced-rag",
+        label: "Advanced RAG",
         children: [
-          { id: "system-design", label: "System Design" },
-          { id: "data-pipeline", label: "Data Pipeline" },
-          { id: "evaluation", label: "Evaluation Metrics" },
-        ],
-      },
-    ],
-  },
-  {
-    id: "advanced",
-    label: "Advanced Topics",
-    children: [
-      {
-        id: "optimization",
-        label: "Optimization",
-        children: [
-          { id: "performance", label: "Performance Tuning" },
-          { id: "cost-reduction", label: "Cost Reduction" },
-          { id: "scaling", label: "Scaling Strategies" },
-        ],
-      },
-      {
-        id: "integration",
-        label: "Integration",
-        children: [
-          { id: "apis", label: "API Integration" },
-          { id: "databases", label: "Database Connections" },
-          { id: "monitoring", label: "Monitoring & Logging" },
-        ],
-      },
-      {
-        id: "troubleshooting",
-        label: "Troubleshooting",
-        children: [
-          { id: "debugging", label: "Debugging Guide" },
-          { id: "best-practices", label: "Best Practices" },
-          { id: "faq", label: "FAQ" },
+          { id: "agentic-rag", label: "Agentic RAG" },
+          { id: "multi-step", label: "Multi-step Retrieval" },
+          { id: "orchestration", label: "Retrieval Orchestration" },
         ],
       },
     ],
