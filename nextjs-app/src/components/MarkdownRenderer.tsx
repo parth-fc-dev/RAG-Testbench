@@ -60,14 +60,14 @@ export default function MarkdownRenderer({ filePath }: MarkdownRendererProps) {
 }
 
 const prose = {
-  p: "text-[17px] leading-[1.78] text-[#374151] mb-5 font-normal tracking-[-0.01em]",
-  h1: "text-[2.15rem] font-bold text-[#0f172a] mt-10 mb-4 leading-[1.2] tracking-[-0.03em]",
-  h2: "text-[1.55rem] font-bold text-[#0f172a] mt-10 mb-3 leading-[1.25] tracking-[-0.025em] border-b border-gray-200 pb-2",
+  p: "text-[19px] leading-[1.78] text-[#374151] mb-5 tracking-[-0.01em]",
+  h1: "text-[3.15rem] font-semibold text-[#0f172a] mt-10 mb-4 leading-[1.2] tracking-[-0.03em]",
+  h2: "text-[2.05rem] font-semibold text-[#0f172a] mt-10 mb-3 leading-[1.25] tracking-[-0.025em] border-b border-gray-200 pb-2",
   h3: "text-[1.2rem] font-semibold text-[#1e293b] mt-8 mb-2 leading-[1.3] tracking-[-0.015em]",
   h4: "text-[1.05rem] font-semibold text-[#1e293b] mt-6 mb-2 leading-[1.35] tracking-[-0.01em]",
   h5: "text-[0.95rem] font-semibold text-[#334155] mt-5 mb-1 leading-[1.4]",
   h6: "text-[0.875rem] font-semibold text-[#475569] mt-4 mb-1 leading-[1.4] uppercase tracking-[0.04em]",
-  li: "text-[17px] leading-[1.78] text-[#374151] mb-[6px] tracking-[-0.01em]",
+  li: "text-[19px] leading-[1.78] text-[#374151] mb-[6px] tracking-[-0.01em]",
   code: "bg-[#f1f5f9] text-[#be123c] px-[5px] py-[2px] rounded-[4px] text-[0.84em] font-mono font-medium",
   hr: "my-8 border-t border-gray-200",
 };
@@ -589,7 +589,7 @@ function MarkdownContent({ markdown }: { markdown: string }) {
 
       // Paragraph
       elements.push(
-        <p key={`p-${i}`} className={prose.p}>
+        <p key={`p-${i}`} className={prose.p} style={{ fontWeight: 490 }}>
           {renderInlineElements(line)}
         </p>,
       );
